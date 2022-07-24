@@ -52,14 +52,15 @@ class Add : AppCompatActivity() {
 
         addTitle.setText("Ajout d'un produit (${category}) ");
         addProductButton.setOnClickListener {
+            var ad = AlertDialog.Builder(this);
             val proName = edProductName.text.toString();
             val proPrice = edProductPrice.text.toString();
             val proDescription = edProductDescription.text.toString();
             val proCategory = category.toString();
             val proImageBlob : ByteArray = getBytes(bitmap!!);
 
-            if (proName=="" || proPrice=="" || proDescription==""|| proCategory=="" || proImageBlob == null ){
-                var ad = AlertDialog.Builder(this);
+            if (proName.isEmpty() || proPrice.isEmpty() || proDescription.isEmpty() || proCategory.isEmpty() || proImageBlob == null ){
+
                 ad.setTitle("Info");
                 ad.setMessage("Veuillez svp renseigner les données dans les champs");
                 ad.setPositiveButton("OK" ,null);
@@ -70,8 +71,10 @@ class Add : AppCompatActivity() {
             {
 
                 val product = Product(proName , proPrice , proDescription , proCategory , proImageBlob)
-                db.addProduct(product)
-                    /*
+                val result = db.addProduct(product)
+
+                if (result){
+
                     var ad = AlertDialog.Builder(this);
                     ad.setTitle("Succès");
                     ad.setMessage("Produit ajouté avec succès");
@@ -82,7 +85,9 @@ class Add : AppCompatActivity() {
                         bitmap = null
                         edProductName.requestFocus();
                     });
-                    ad.show(); */
+                    ad.show();
+                }
+
             }
 
         }
