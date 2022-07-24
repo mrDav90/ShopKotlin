@@ -18,7 +18,7 @@ class ProductsAdaptor (
 ) : ArrayAdapter<Product>(myContext , ressource , values) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val post = values[position]
+        val product = values[position]
         val itemView = LayoutInflater.from(myContext).inflate(ressource , parent , false)
         val tvName = itemView.findViewById<TextView>(R.id.name)
         val tvPrice = itemView.findViewById<TextView>(R.id.price)
@@ -26,11 +26,11 @@ class ProductsAdaptor (
         val tvCategory = itemView.findViewById<TextView>(R.id.category)
         val tvPicture = itemView.findViewById<ImageView>(R.id.imageView)
 
-        tvName.text = post.pName
-        tvPrice.text = post.pPrice
-        tvDescription.text = post.pDescription
-        tvCategory.text = post.pCategory
-        val bitmap = getBitmap(post.pImage)
+        tvName.text = product.pName
+        tvPrice.text = product.pPrice
+        tvDescription.text = product.pDescription
+        tvCategory.text = product.pCategory
+        val bitmap = getBitmap(product.pImage)
         tvPicture.setImageBitmap(bitmap);
         return itemView
     }

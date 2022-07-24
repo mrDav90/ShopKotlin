@@ -30,11 +30,12 @@ class ProductsList : AppCompatActivity() {
         searchProduct.visibility = View.VISIBLE
         listProduct.visibility = View.VISIBLE
 
+        productArray = db.findProducts(category.toString())
+        adaptor = ProductsAdaptor (this , R.layout.item_post , productArray)
+        listProduct.adapter = adaptor
+        registerForContextMenu(listProduct)
 
     }
 
-    adaptor = PostAdaptor(this , R.layout.item_post , productArray)
-    listProduct.adapter = adaptor
-    registerForContextMenu(listProduct)
 
 }

@@ -48,24 +48,23 @@ class Database(
         return result !=1
     }
 
-    fun findProducts (name : String , price : String , description : String , category : String ) : ArrayList<Product> {
+    fun findProducts (cat : String  ) : ArrayList<Product> {
         val product  = ArrayList<Product>()
         val db = this.readableDatabase
-        val selectQuery = "SELECT * FROM $PRODUCT_TABLE "
-        val cursor = db.rawQuery(selectQuery , null)
+        val selectQuery = "SELECT * FROM $PRODUCT_TABLE WHERE productCategory = ? "
+        val cursor = db.rawQuery(selectQuery , arrayOf(cat) )
         if (cursor != null ){
             if (cursor.moveToFirst()){
                 do {
                     val vId = cursor.getInt(cursor.getColumnIndexOrThrow(productId));
                     val vName = cursor.getString(cursor.getColumnIndexOrThrow(productName));
-                    val vPrice = cursor.getDouble(cursor.getColumnIndexOrThrow(productPrice));
+                    val vPrice = cursor.getString(cursor.getColumnIndexOrThrow(productPrice));
                     val vDescription = cursor.getString(cursor.getColumnIndexOrThrow(
                         productDescription));
                     val vCategory = cursor.getString(cursor.getColumnIndexOrThrow(productCategory));
                     val vImage = cursor.getBlob(cursor.getColumnIndexOrThrow(productImage));
-
-
-
+                    val theData = Product(vId , vName , vPrice , vDescription , vCategory , vImage)
+                    product.add(theData)
                 }while (cursor.moveToNext())
             }
         }
