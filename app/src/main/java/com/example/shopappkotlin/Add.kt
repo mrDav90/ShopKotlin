@@ -90,7 +90,7 @@ class Add : AppCompatActivity() {
         listProductButton.setOnClickListener {
             val proCategory = category.toString() ;
             intent = Intent(this , ProductsList::class.java);
-            intent.putExtra("currentCategory" , proCategory  );
+            intent.putExtra("category" , proCategory  );
             startActivity(intent);
         }
     }
