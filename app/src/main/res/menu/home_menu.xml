@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/paramsIcon"
+        android:title="Paramètres" />
+    <item
+        android:id="@+id/disconnectIcon"
+        android:title="Déconnexion" />
+    <item
+        android:id="@+id/addIcon"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:title="Ajouter"
+        app:showAsAction="always" />
+</menu>

@@ -75,6 +75,7 @@ class ProductsAdaptor (
                 }
                 true
             }
+            popupMenu.show()
         }
 
 

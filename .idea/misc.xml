@@ -6,11 +6,14 @@
         <entry key="app/src/main/res/layout/activity_add.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_connexion.xml" value="0.14855072463768115" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_product_details.xml" value="0.14855072463768115" />
+        <entry key="app/src/main/res/layout/activity_product_update.xml" value="0.14855072463768115" />
         <entry key="app/src/main/res/layout/activity_products_list.xml" value="0.14855072463768115" />
         <entry key="app/src/main/res/layout/activity_shop.xml" value="0.14855072463768115" />
         <entry key="app/src/main/res/layout/item_post.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/item_product.xml" value="0.14855072463768115" />
-        <entry key="app/src/main/res/menu/list_popup_menu.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/item_product.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/home_menu.xml" value="0.19375" />
+        <entry key="app/src/main/res/menu/list_popup_menu.xml" value="0.33" />
       </map>
     </option>
   </component>
