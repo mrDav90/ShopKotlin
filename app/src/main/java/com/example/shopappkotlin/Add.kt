@@ -37,7 +37,7 @@ class Add : AppCompatActivity() {
         listProductButton = findViewById(R.id.listProductButton);
         var addTitle = findViewById<TextView>(R.id.addTitle);
         val bundle: Bundle? = intent.extras
-        val category = bundle?.get("category")
+        val category = bundle?.get("currentCategory")
 
         val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { data ->
             val inputStream = contentResolver.openInputStream(data)
@@ -87,12 +87,12 @@ class Add : AppCompatActivity() {
 
         }
 
-        listProductButton.setOnClickListener {
+        /*listProductButton.setOnClickListener {
             val proCategory = category.toString() ;
             intent = Intent(this , ProductsList::class.java);
             intent.putExtra("currentCategory" , proCategory  );
             startActivity(intent);
-        }
+        } */
     }
 
     override fun onActivityResult(requestCode : Int  , resultCode : Int , data : Intent?){

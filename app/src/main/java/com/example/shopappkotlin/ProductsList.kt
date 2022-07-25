@@ -23,12 +23,14 @@ class ProductsList : AppCompatActivity() {
     lateinit var listProduct : ListView
     var productArray = ArrayList<Product>()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_list)
         db = Database(applicationContext)
         val bundle: Bundle? = intent.extras
-        val category = bundle?.get("currentCategory");
+        val category = bundle?.get("category");
         var searchProduct = findViewById<SearchView>(R.id.searchProduct);
         listProduct = findViewById(R.id.listProduct);
         searchProduct.visibility = View.VISIBLE
@@ -49,13 +51,20 @@ class ProductsList : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.addIcon -> {
-                Toast.makeText(this , "add test" , Toast.LENGTH_SHORT).show()
+                Intent(this , Add::class.java).also{
+                    val bundle: Bundle? = intent.extras
+                    val category = bundle?.get("category");
+                    it.putExtra("currentCategory" , category.toString())
+                    this.startActivity(it)
+                }
             }
             R.id.paramsIcon -> {
                 Toast.makeText(this , "params test" , Toast.LENGTH_SHORT).show()
             }
             R.id.disconnectIcon -> {
-                Toast.makeText(this , "disconnect test" , Toast.LENGTH_SHORT).show()
+                Intent(this , Connexion::class.java).also{
+                    this.startActivity(it)
+                }
             }
         }
 

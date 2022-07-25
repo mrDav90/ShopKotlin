@@ -17,25 +17,25 @@ class Shop : AppCompatActivity() {
 
 
         shoesBt.setOnClickListener {
-            intent = Intent(this , Add::class.java);
+            intent = Intent(this , ProductsList::class.java);
             intent.putExtra("category" , "chaussure");
             startActivity(intent)
         }
 
         shirtsBt.setOnClickListener {
-            intent = Intent(this , Add::class.java);
+            intent = Intent(this , ProductsList::class.java);
             intent.putExtra("category" , "t-shirt");
             startActivity(intent)
         }
 
         jeansBt.setOnClickListener {
-            intent = Intent(this , Add::class.java);
+            intent = Intent(this , ProductsList::class.java);
             intent.putExtra("category" , "jeans");
             startActivity(intent)
         }
 
         beautyBt.setOnClickListener {
-            intent = Intent(this , Add::class.java);
+            intent = Intent(this , ProductsList::class.java);
             intent.putExtra("category" , "beauté");
             startActivity(intent)
         }
