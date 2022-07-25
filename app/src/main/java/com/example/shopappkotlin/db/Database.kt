@@ -63,7 +63,7 @@ class Database(
                         productDescription));
                     val vCategory = cursor.getString(cursor.getColumnIndexOrThrow(productCategory));
                     val vImage = cursor.getBlob(cursor.getColumnIndexOrThrow(productImage));
-                    val theData = Product(vId , vName , "${vPrice}$" , vDescription , vCategory , vImage)
+                    val theData = Product(vId , vName , "${vPrice}fCFA" , vDescription , vCategory , vImage)
                     product.add(theData)
                 }while (cursor.moveToNext())
             }
@@ -71,6 +71,19 @@ class Database(
 
         db.close()
         return product
+    }
+
+    fun updateProducts(product : Product) : Boolean {
+        val db = this.writableDatabase
+        val values = ContentValues()
+        values.put(productName , product.pName)
+        values.put(productPrice , product.pPrice)
+        values.put(productDescription , product.pDescription)
+        values.put(productCategory , product.pCategory)
+        values.put(productImage , product.pImage)
+        val result = db.insert(PRODUCT_TABLE , null  ,values).toInt()
+        db.close()
+        return result !=1
     }
 
 
