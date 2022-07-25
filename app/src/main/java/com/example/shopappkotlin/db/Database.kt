@@ -76,7 +76,7 @@ class Database(
 
     fun deleteProduct(id : Int) : Boolean {
         val db = writableDatabase
-        val result = db.delete(PRODUCT_TABLE , "id=?", arrayOf(id.toString()))
+        val result = db.delete(PRODUCT_TABLE , " $productId =?", arrayOf(id.toString()))
         return result > 0
     }
 

@@ -87,12 +87,12 @@ class Add : AppCompatActivity() {
 
         }
 
-        /*listProductButton.setOnClickListener {
+        listProductButton.setOnClickListener {
             val proCategory = category.toString() ;
             intent = Intent(this , ProductsList::class.java);
             intent.putExtra("currentCategory" , proCategory  );
             startActivity(intent);
-        } */
+        }
     }
 
     override fun onActivityResult(requestCode : Int  , resultCode : Int , data : Intent?){
