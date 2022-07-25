@@ -39,13 +39,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_height="wrap_content">
+            android:layout_gravity="center"
+            android:layout_height="100px">
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
+                android:layout_gravity="start"
                 android:textColor="@color/black"
                 android:layout_marginTop="5dp"
                 android:text="Name"
@@ -53,43 +55,26 @@
             <ImageView
                 android:id="@+id/detailsIcon"
                 android:layout_width="70dp"
-                android:layout_height="20dp"
+                android:layout_gravity="start"
+                android:layout_height="30dp"
                 android:src="@drawable/ellipse"
                 android:contentDescription="icon" />
 
         </LinearLayout>
 
-
-
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:text="Description"
-            tools:ignore="MissingConstraints" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/category"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="start"
-                android:text="Category"
-                tools:ignore="MissingConstraints" />
-
+            android:layout_height="100px">
             <TextView
                 android:id="@+id/price"
-                android:layout_width="100dp"
-                android:gravity="end"
+                android:layout_width="match_parent"
+                android:gravity="start"
                 android:textColor="@color/priceColor"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:textSize="20dp"
                 android:text="Price"
                 tools:ignore="MissingConstraints" />
         </LinearLayout>

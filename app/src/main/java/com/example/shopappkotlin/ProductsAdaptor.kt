@@ -22,15 +22,15 @@ class ProductsAdaptor (
         val itemView = LayoutInflater.from(myContext).inflate(ressource , parent , false)
         val tvName = itemView.findViewById<TextView>(R.id.name)
         val tvPrice = itemView.findViewById<TextView>(R.id.price)
-        val tvDescription = itemView.findViewById<TextView>(R.id.description)
-        val tvCategory = itemView.findViewById<TextView>(R.id.category)
+       // val tvDescription = itemView.findViewById<TextView>(R.id.description)
+        //val tvCategory = itemView.findViewById<TextView>(R.id.category)
         val tvPicture = itemView.findViewById<ImageView>(R.id.imageView)
         val detailsIcon = itemView.findViewById<ImageView>(R.id.detailsIcon)
 
         tvName.text = product.pName
         tvPrice.text = product.pPrice
-        tvDescription.text = product.pDescription
-        tvCategory.text = product.pCategory
+        //tvDescription.text = product.pDescription
+        //tvCategory.text = product.pCategory
         val bitmap = getBitmap(product.pImage)
         tvPicture.setImageBitmap(bitmap);
 
