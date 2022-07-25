@@ -63,7 +63,7 @@ class Database(
                         productDescription));
                     val vCategory = cursor.getString(cursor.getColumnIndexOrThrow(productCategory));
                     val vImage = cursor.getBlob(cursor.getColumnIndexOrThrow(productImage));
-                    val theData = Product(vId , vName , vPrice , vDescription , vCategory , vImage)
+                    val theData = Product(vId , vName , "${vPrice}$" , vDescription , vCategory , vImage)
                     product.add(theData)
                 }while (cursor.moveToNext())
             }
@@ -71,6 +71,13 @@ class Database(
 
         db.close()
         return product
+    }
+
+
+    fun deleteProduct(id : Int) : Boolean {
+        val db = writableDatabase
+        val result = db.delete(PRODUCT_TABLE , "id=?", arrayOf(id.toString()))
+        return result > 0
     }
 
     // Fix our variables name

@@ -60,12 +60,7 @@ class Add : AppCompatActivity() {
             val proImageBlob : ByteArray = getBytes(bitmap!!);
 
             if (proName.isEmpty() || proPrice.isEmpty() || proDescription.isEmpty() || proCategory.isEmpty() || proImageBlob == null ){
-
-                ad.setTitle("Info");
-                ad.setMessage("Veuillez svp renseigner les données dans les champs");
-                ad.setPositiveButton("OK" ,null);
-                ad.show();
-
+                Toast.makeText(this , "Veuillez svp renseigner les données dans les champs" , Toast.LENGTH_SHORT).show()
             }
             else
             {
