@@ -23,7 +23,6 @@ class Add : AppCompatActivity() {
     lateinit var edProductPrice : EditText
     lateinit var edProductDescription : EditText
     lateinit var addProductButton : Button
-    lateinit var listProductButton:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +33,6 @@ class Add : AppCompatActivity() {
         edProductDescription = findViewById(R.id.edProductDescription);
         edProductImage = findViewById(R.id.edProductImage);
         addProductButton = findViewById(R.id.addProductButton);
-        listProductButton = findViewById(R.id.listProductButton);
         var addTitle = findViewById<TextView>(R.id.addTitle);
         val bundle: Bundle? = intent.extras
         val category = bundle?.get("currentCategory")
@@ -78,7 +76,13 @@ class Add : AppCompatActivity() {
                         edProductPrice.setText("");
                         edProductDescription.setText("");
                         bitmap = null
+                        edProductImage.setImageBitmap(bitmap)
                         edProductName.requestFocus();
+
+                        intent = Intent(this , ProductsList::class.java);
+                        intent.putExtra("category" , category.toString()  );
+                        startActivity(intent);
+
                     });
                     ad.show();
                 }
@@ -87,12 +91,6 @@ class Add : AppCompatActivity() {
 
         }
 
-        listProductButton.setOnClickListener {
-            val proCategory = category.toString() ;
-            intent = Intent(this , ProductsList::class.java);
-            intent.putExtra("category" , proCategory  );
-            startActivity(intent);
-        }
     }
 
     override fun onActivityResult(requestCode : Int  , resultCode : Int , data : Intent?){

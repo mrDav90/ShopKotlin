@@ -9,14 +9,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="10dp"
             >
-
             <TextView
                 android:id="@+id/addTitle"
                 android:layout_width="match_parent"
@@ -70,8 +68,6 @@
                 tools:layout_editor_absoluteX="99dp"
                 tools:layout_editor_absoluteY="184dp" />
 
-
-
             <ImageButton
                 android:id="@+id/edProductImage"
                 android:layout_width="match_parent"
@@ -100,18 +96,6 @@
                 android:layout_marginTop="20dp"
                 tools:layout_editor_absoluteX="154dp"
                 tools:layout_editor_absoluteY="322dp" />
-
-            <Button
-                android:id="@+id/listProductButton"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="@color/appColor"
-                android:layout_marginTop="20dp"
-                android:text="Voir les produits"
-                tools:layout_editor_absoluteX="157dp"
-                tools:layout_editor_absoluteY="495dp" />
-
         </LinearLayout>
     </ScrollView>
 

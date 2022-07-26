@@ -53,11 +53,12 @@ class ProductsAdaptor (
                     }
                     R.id.itemUpdate -> {
                         Intent(myContext , ProductUpdate::class.java).also{
-                            it.putExtra("productName" , product.pName)
-                            it.putExtra("productPrice" , product.pPrice)
-                            it.putExtra("productDescription" , product.pDescription)
-                            it.putExtra("productCategory" , product.pCategory)
-                            it.putExtra("productImage" , product.pImage)
+                            it.putExtra("productId1" , product.pId)
+                            it.putExtra("productName1" , product.pName)
+                            it.putExtra("productPrice1" , product.pPrice)
+                            it.putExtra("productDescription1" , product.pDescription)
+                            it.putExtra("productCategory1" , product.pCategory)
+                            it.putExtra("productImage1" , product.pImage)
                             myContext.startActivity(it)
                         }
                     }

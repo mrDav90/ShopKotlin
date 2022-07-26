@@ -6,4 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".ProductUpdate">
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mis à jour d'un produit"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/upProductName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:hint="Nom"
+                android:background="@color/inputBgColor"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="66dp" />
+
+            <EditText
+                android:id="@+id/upProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/inputBgColor"
+                android:ems="10"
+                android:hint="Prix"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="122dp" />
+
+            <EditText
+                android:id="@+id/upProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/inputBgColor"
+                android:ems="10"
+                android:hint="Description"
+                android:padding="3dp"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="99dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+            <ImageButton
+                android:id="@+id/upProductImage"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_height="150dp"
+                app:srcCompat="@android:drawable/ic_menu_upload" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:text="Cliquer pour uploader une image" />
+
+
+            <Button
+                android:id="@+id/updateProductButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Mettre à jour"
+                android:layout_gravity="center"
+                android:width="200dp"
+                android:background="@color/appColor"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="154dp"
+                tools:layout_editor_absoluteY="322dp" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
