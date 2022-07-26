@@ -73,15 +73,15 @@ class Database(
         return product
     }
 
-    fun updateProduct( id : Int , product : Product) : Boolean {
+    fun updateProduct( id : Int , name: String , price : String , description: String , category: String , image : ByteArray ) : Boolean {
         val db = this.writableDatabase
         val values = ContentValues()
-        values.put(productName , product.pName)
-        values.put(productPrice , product.pPrice)
-        values.put(productDescription , product.pDescription)
-        values.put(productCategory , product.pCategory)
-        values.put(productImage , product.pImage)
-        val result = db.update(PRODUCT_TABLE , values   , "$productId =?", arrayOf(id.toString()) )
+        values.put(productName ,  name)
+        values.put(productPrice , price)
+        values.put(productDescription , description)
+        values.put(productCategory ,category)
+        values.put(productImage , image)
+        val result = db.update(PRODUCT_TABLE , values   , "_id =?", arrayOf("${id}") )
         db.close()
         return result !=1
     }

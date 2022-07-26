@@ -59,8 +59,9 @@ class ProductUpdate : AppCompatActivity() {
 
 
         updateProductButton.setOnClickListener {
+            Toast.makeText(this , "tesssssssst" , Toast.LENGTH_SHORT).show()
             // Reprendre les nouvelles données entrées
-            val upProductName2 = findViewById<EditText>(R.id.upProductName)
+            /*val upProductName2 = findViewById<EditText>(R.id.upProductName)
             val upProductPrice2 = findViewById<EditText>(R.id.upProductPrice)
             val upProductDescription2 = findViewById<EditText>(R.id.upProductDescription)
             val upProductImage2 = findViewById<ImageButton>(R.id.upProductImage)
@@ -71,11 +72,11 @@ class ProductUpdate : AppCompatActivity() {
             val proCategory = theProductCategory.toString();
             val proImageBlob: ByteArray = getBytes(bitmap!!);
 
-            //Toast.makeText(this , "tesssssssst" , Toast.LENGTH_SHORT).show()
 
 
-            val product = Product(proName, proPrice, proDescription, proCategory, proImageBlob)
-            val result = db.updateProduct(productId as Int, product)
+
+            //val product = Product(proName, proPrice, proDescription, proCategory, proImageBlob)
+            val result = db.updateProduct(productId as Int,  proName , proPrice , proDescription , proCategory , proImageBlob)
             if (result) {
                 var ad = AlertDialog.Builder(this);
                 ad.setTitle("Succès");
@@ -88,7 +89,7 @@ class ProductUpdate : AppCompatActivity() {
                         startActivity(intent);
                     });
                 ad.show();
-            }
+            } */
 
         }
     }
