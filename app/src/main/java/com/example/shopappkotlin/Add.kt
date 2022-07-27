@@ -48,7 +48,7 @@ class Add : AppCompatActivity() {
             galleryLauncher.launch("image/*");
         }
 
-        addTitle.setText("Ajout d'un produit (${category}) ");
+        addTitle.setText("Ajouter un produit : ${category} ");
         addProductButton.setOnClickListener {
             var ad = AlertDialog.Builder(this);
             val proName = edProductName.text.toString();

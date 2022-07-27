@@ -13,7 +13,7 @@ class Shop : AppCompatActivity() {
         var shoesBt = findViewById<Button>(R.id.shoesBt);
         var shirtsBt = findViewById<Button>(R.id.shirtsBt);
         var jeansBt = findViewById<Button>(R.id.jeansBt);
-        var beautyBt = findViewById<Button>(R.id.beautyBt);
+        var watchBt = findViewById<Button>(R.id.watchBtn);
 
 
         shoesBt.setOnClickListener {
@@ -34,9 +34,9 @@ class Shop : AppCompatActivity() {
             startActivity(intent)
         }
 
-        beautyBt.setOnClickListener {
+        watchBt.setOnClickListener {
             intent = Intent(this , ProductsList::class.java);
-            intent.putExtra("category" , "beauté");
+            intent.putExtra("category" , "montres");
             startActivity(intent)
         }
     }

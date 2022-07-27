@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Shop">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,54 +24,145 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SHOP"
-            android:textSize="25dp"
+            android:fontFamily="cursive"
+            android:textSize="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="40dp"
             />
 
-        <Button
-            android:id="@+id/shoesBt"
+        <TextView
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="CHAUSSURES"
-            android:width="300dp"
-            android:height="60dp"
-            tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="128dp" />
+            android:text="Visitez nos catégories de produits"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            />
 
-        <Button
-            android:id="@+id/shirtsBt"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="T-SHIRTS"
-            android:width="300dp"
-            android:height="60dp"
-            android:layout_gravity="center"
-            tools:layout_editor_absoluteX="152dp"
-            tools:layout_editor_absoluteY="198dp" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            >
 
-        <Button
-            android:id="@+id/jeansBt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="JEANS"
-            android:width="300dp"
-            android:height="60dp"
-            android:layout_gravity="center"
-            tools:layout_editor_absoluteX="149dp"
-            tools:layout_editor_absoluteY="270dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                >
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoes"
+                    />
+                <Button
+                    android:id="@+id/shoesBt"
+                    android:background="@color/appColor"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="CHAUSSURES"
+                    android:layout_marginTop="5dp"
 
-        <Button
-            android:id="@+id/beautyBt"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jeans"
+                    />
+                <Button
+                    android:id="@+id/jeansBt"
+                    android:fontFamily="sans-serif"
+                    android:background="@color/appColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="JEANS"
+                    android:layout_marginTop="5dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BEAUTE"
-            android:width="300dp"
-            android:height="60dp"
-            android:layout_gravity="center"
-            tools:layout_editor_absoluteX="152dp"
-            tools:layout_editor_absoluteY="350dp" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                >
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shirts"
+                    />
+                <Button
+                    android:id="@+id/shirtsBt"
+                    android:background="@color/appColor"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="T-SHIRTS"
+                    android:layout_marginTop="5dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/montres"
+                    />
+                <Button
+                    android:id="@+id/watchBtn"
+                    android:background="@color/appColor"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="MONTRES"
+                    android:layout_marginTop="5dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
     </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
