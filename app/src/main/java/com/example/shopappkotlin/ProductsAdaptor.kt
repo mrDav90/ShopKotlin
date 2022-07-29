@@ -27,7 +27,7 @@ class ProductsAdaptor (
         val tvPicture = itemView.findViewById<ImageView>(R.id.imageView)
         val detailsIcon = itemView.findViewById<ImageView>(R.id.detailsIcon)
 
-        tvName.text = product.pName
+        tvName.text = cutString(product.pName)
         tvPrice.text = product.pPrice
         //tvDescription.text = product.pDescription
         //tvCategory.text = product.pCategory
@@ -95,6 +95,17 @@ class ProductsAdaptor (
 
 
         return itemView
+    }
+
+
+    fun cutString (text : String) : String {
+        if (text.length > 10) {
+             return  text.substring(0,10)+"..."
+        }
+        else
+        {
+            return text
+        }
     }
 
 
