@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,12 +10,6 @@
     tools:context=".ProductsAdaptor"
     >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="350px"
@@ -25,87 +19,44 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="18dp"
             tools:layout_editor_absoluteY="9dp" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:foregroundGravity="center"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:orientation="vertical"
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="139dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="203dp"
-        tools:layout_editor_absoluteY="6dp">
+        tools:layout_editor_absoluteY="28dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/theDetailsIcon"
+        android:layout_width="27dp"
+        android:layout_height="26dp"
+        android:layout_gravity="bottom"
+        android:paddingBottom="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="27dp" />
 
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="@color/black"
-                android:layout_marginTop="5dp"
-                android:text="Name"
-                tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:gravity="start"
+        android:text="Price"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:ignore="MissingConstraints" />
 
-            <ImageView
-                android:id="@+id/theDetailsIcon"
-                android:paddingBottom="5dp"
-                android:layout_width="50px"
-                android:layout_height="50px"
-                android:layout_gravity="bottom"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ellipse"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="18dp"
-                tools:layout_editor_absoluteY="9dp" />
-
-        </LinearLayout>
-
-
-
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:text="Description"
-            tools:ignore="MissingConstraints" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/category"
-                android:layout_width="112dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="start"
-                android:text="Category"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="112dp"
-                android:gravity="end"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Price"
-                tools:ignore="MissingConstraints" />
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

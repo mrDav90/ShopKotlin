@@ -19,23 +19,12 @@
         >
 
         <TextView
-            android:id="@+id/textView"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SHOP"
-            android:fontFamily="cursive"
-            android:textSize="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="40dp"
-            />
-
-        <TextView
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Visitez nos catégories de produits"
+            android:text="Parcourez catégories de produits disponiibles"
             android:textSize="15dp"
+            android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="40dp"
             />

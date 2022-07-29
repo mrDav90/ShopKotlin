@@ -34,6 +34,20 @@ class ProductsAdaptor (
         val bitmap = getBitmap(product.pImage)
         tvPicture.setImageBitmap(bitmap);
 
+        val details = itemView.findViewById<LinearLayout>(R.id.itemDetails)
+
+        details.setOnClickListener {
+            Intent(myContext , ProductDetails::class.java).also{
+                it.putExtra("productName" , product.pName)
+                it.putExtra("productPrice" , product.pPrice)
+                it.putExtra("productDescription" , product.pDescription)
+                it.putExtra("productCategory" , product.pCategory)
+                it.putExtra("productImage" , product.pImage)
+                myContext.startActivity(it)
+            }
+
+        }
+
 
         detailsIcon.setOnClickListener{
             val popupMenu = PopupMenu(myContext , detailsIcon)
@@ -41,7 +55,7 @@ class ProductsAdaptor (
 
             popupMenu.setOnMenuItemClickListener { item ->
                 when(item.itemId){
-                    R.id.itemDetails -> {
+                    R.id.itemDetail -> {
                         Intent(myContext , ProductDetails::class.java).also{
                             it.putExtra("productName" , product.pName)
                             it.putExtra("productPrice" , product.pPrice)

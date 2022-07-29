@@ -10,6 +10,7 @@
     <color name="appColor">#2c3e50</color>
     <color name="inputBgColor">#f1f2f6</color>
     <color name="priceColor"> #c23616</color>
+    <color name="ratingColor"> #fbc531</color>
 
 
 </resources>
